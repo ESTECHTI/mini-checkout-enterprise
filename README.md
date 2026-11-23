@@ -18,4 +18,14 @@ A checkout application in development. The first planned flow lets a shopper sub
 4. Run builds and tests on pull requests with GitHub Actions.
 5. Package the application with Docker and configure delivery to AWS.
 
-The initial commit contains the repository structure. Application setup and run instructions will accompany the first implementation.
+## Run the API
+
+With JDK 21 and Maven installed, run these commands from the repository root:
+
+```sh
+cd apps/api
+mvn verify
+mvn spring-boot:run
+```
+
+Open http://localhost:8080/actuator/health to check application health. The expected response is `{"status":"UP"}`.
